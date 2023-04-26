@@ -44,3 +44,80 @@ print(type(a) == nil)
 print(type(a) == "nil")
 -- type(a)本质上是一个字符串，是string类型
 print(type(type(a)))
+
+-- boolean 类型只有两个可选值：true和false
+-- lua把flase和nil看作是false，其他的都为true
+
+print(type(true))
+print(type(false))
+print(type(nil))
+
+if false or nil then
+    print("至少一个为true")
+else
+    print("都为false")
+end
+
+if 0 then
+    print("数字0是true")
+else
+    print("数字0为false")
+end
+
+
+-- number
+
+print(type(2))
+print(type(2.1))
+print(type(0.2))
+print(type(2e+1))
+print(type(0.2e+1))
+print(type(2.111111))
+
+-- 字符串由一对双引号或单引号表示
+local str1 = "hello"
+print(str1)
+
+
+-- 在对数字字符串进行算术操作时，lua会将字符串转换成一个数字
+print("2" + 6)
+
+-- 字符串连接使用的是..
+print("a" .. "b")
+
+-- #计算字符串的长度
+local str2 = "hellooo"
+print(#str2)
+
+-- table
+-- 在Lua里，table的创建是通过“构造表达式”来完成的
+-- 最简单的构造表达式是{}，用来创建一个空表
+local tab4 = {}
+tab4 = { 1, 2, 3, 4 }
+print(tab4)
+
+-- lua里table是一个关联数组，数组的索引可以是数字或者字符串
+local a = {}
+a["key"] = 10
+local key = 20
+a[key] = 30
+for k, v in pairs(a) do
+    print(k .. ":" .. v)
+end
+
+-- lua数组的初始索引为1
+-- table不会固定长度大小，添加新数据的时候，长度会自动增长
+
+-- 函数
+function Hello(n)
+    if n == 0 then
+        return 1
+    else
+        return n * Hello(n - 1)
+    end
+end
+
+local ss = Hello(12)
+print(ss)
+
+-- 匿名函数
