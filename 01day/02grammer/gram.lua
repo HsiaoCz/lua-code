@@ -9,23 +9,24 @@ local num
 print(num)
 
 -- boolean
-local a=true
-local b=false
-print(a,b)
+local a = true
+local b = false
+print(a, b)
 
 -- 数字类型
-local c=100
+local c = 100
 print(type(c))
 print(c)
 
 -- lua单行注释两个杠，多行注释
 -- 多行注释
---[[ 
-多行注释     
+--[[
+多行注释
 --]]
-
 -- lua的标识符，可以是字母数字下划线，但是最好不要使用大写字母和下划线
 -- 区分大小写，@,$,%也可以用来定义标识符
 
 -- 全局变量，默认的情况下，变量总是全局变量
 -- 使用 verb=nil可以注销一个全局变量
+-- 访问一个没有初始化的全局变量不会出错，但是会报nil
+-- 当且仅当一个变量不等于nil时，这个变量即存在

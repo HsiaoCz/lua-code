@@ -2,3 +2,4 @@
 -- luac hello.lua 编译命令
 -- lua luac.out
 print("hello")
+print("Hello World")
