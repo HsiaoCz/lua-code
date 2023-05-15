@@ -48,3 +48,15 @@ end
 - 表字段
 
 ### 2、变量类型
+
+lua 中有基本数据类型：
+nil、boolean、number、string、function、thread、userdata、table
+
+- nil:表示一个无效值
+- boolean:表示布尔类型的值，true false 只有 nil false 为 false
+- number:不区分整形和浮点型
+- string:单双引号都可以 原始输出[[\]\]
+- function:表示函数
+- userdata:自定义数据格式
+- thread:协程
+- table:表
