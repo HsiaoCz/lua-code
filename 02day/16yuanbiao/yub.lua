@@ -13,16 +13,23 @@ local metaT3 = {}
 setmetatable(t1, metaT3)
 setmetatable(t2, metaT3)
 
-metaT3.__add = function(t1, t2)
+metaT3.__add = function(tab1, tab2)
+    local len1 = #t1
+    local len2 = #t2
     local rs = {}
-    for i = 1, #t1 do
-        rs[i] = t1[i] + t2[i]
+    if len1 > len2 then
+        len2 = len1
+    end
+    for i = 1, len2 do
+        local a = t1[i] or 0
+        local b = t2[i] or 0
+        rs[i] = a + b
     end
     return rs
 end
 
 local t3 = t1 + t2
 
-metaT3.__sub = function(t1, t2)
+metaT3.__sub = function(tab3, tab4)
 
 end
